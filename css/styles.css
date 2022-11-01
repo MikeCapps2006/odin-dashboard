@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-.logo {
-    margin: 5px;
-    padding: 5px;
-}
-
 .icon {
     font-size: 1em;
 }
@@ -23,11 +18,8 @@
     background-color: #1992D3;
     grid-column: 1/3;
     grid-row: 1/3;
-}
-
-.header {
-    grid-column: 3/13;
-    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
 }
 
 .sidebar ul li {
@@ -37,10 +29,146 @@
 
 .projects {
     grid-row: 2/3;
-    grid-column: 3/9;
+    grid-column: 3/10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding-top: 15px;
+    background-color: rgb(226,232,240);
 }
 
 .announcementsAndTrending {
     grid-row: 2/3;
-    grid-column: 9/13;
+    grid-column: 10/13;
+    background-color: rgb(226,232,240);
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.fa-chart-line {
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+header {
+    grid-column: 3/13;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+.search {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #E2E8F0;
+}
+
+.notification {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.greeting {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.greeting div {
+    align-self: end;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.buttons {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.buttons li {
+    padding: 10px;
+    background-color: #1992D3;
+    color: white;
+    border-radius: 25px;
+    height: 20px;
+    width: 60px;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    height: 175px;
+    width: 225px;
+    padding: 15px;
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card h1 {
+    font-size: 30px;
+}
+
+.announcements, .trending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.announcements h3, .trending h3 {
+    margin-bottom: 10px;
+}
+
+.announcements p, .trending p{
+    margin: 5px 0px;
+}
+
+hr {
+    margin: 10px 0px;
+}
+
+.trends {
+    display: flex;
+}
+
+.trends p {
+    margin-left: 10px;
+}
+
+.trending .card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 2em;
+}
+
+.main-nav ul, .sub-nav ul {
+    margin-left: 20px;
+    list-style: none;
 }
